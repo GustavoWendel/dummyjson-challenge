@@ -19,8 +19,7 @@ public class ProductController implements ProductControllerApi {
     private ProductService productService;
 
     @GetMapping
-    public ResponseEntity<ProductResponseWrapper> getAll(Integer skip,
-                                                         Integer limit) {
+    public ResponseEntity<ProductResponseWrapper> getAll(Integer skip, Integer limit) {
         ProductResponseWrapper responseWrapper = productService.getAllProducts(skip, limit);
         return ResponseEntity.ok(responseWrapper);
     }
@@ -32,9 +31,7 @@ public class ProductController implements ProductControllerApi {
     }
 
     @GetMapping("/search")
-    public ResponseEntity<ProductResponseWrapper> search(String query,
-                                                         Integer skip,
-                                                         Integer limit) {
+    public ResponseEntity<ProductResponseWrapper> search(String query, Integer skip, Integer limit) {
         ProductResponseWrapper responseWrapper = productService.searchProducts(query, skip, limit);
         return ResponseEntity.ok(responseWrapper);
     }

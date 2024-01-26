@@ -26,7 +26,6 @@ public interface ProductControllerApi {
     ResponseEntity<ProductResponseWrapper> getAll(
             @Parameter(description = "Number of items to skip")
             @RequestParam(value = "skip", defaultValue = "0") Integer skip,
-
             @Parameter(description = "Maximum number of items to return")
             @RequestParam(value = "limit", defaultValue = "30") Integer limit);
 
@@ -53,10 +52,8 @@ public interface ProductControllerApi {
     ResponseEntity<ProductResponseWrapper> search(
             @Parameter(description = "Query string for searching products")
             @RequestParam("q") String query,
-
             @Parameter(description = "Number of items to skip")
             @RequestParam(value = "skip", defaultValue = "0") Integer skip,
-
             @Parameter(description = "Maximum number of items to return")
             @RequestParam(value = "limit", defaultValue = "30") Integer limit);
 }
