@@ -25,6 +25,19 @@ public class ProductResponse {
     @JsonProperty("images")
     List<String> images = new ArrayList<> ();
 
+    public ProductResponse(Integer id, String title, String description, Double price, Double discountPercentage, Double rating, Double stock, String brand, String category, String thumbnail, List<String> images) {
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.price = price;
+        this.discountPercentage = discountPercentage;
+        this.rating = rating;
+        this.stock = stock;
+        this.brand = brand;
+        this.category = category;
+        this.thumbnail = thumbnail;
+        this.images = images;
+    }
 
     public Integer getId() {
         return id;

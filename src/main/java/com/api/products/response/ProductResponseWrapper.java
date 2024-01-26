@@ -15,6 +15,13 @@ public class ProductResponseWrapper {
     @JsonProperty("limit")
     private int limit;
 
+    public ProductResponseWrapper(List<ProductResponse> products, int total, int skip, int limit) {
+        this.products = products;
+        this.total = total;
+        this.skip = skip;
+        this.limit = limit;
+    }
+
     public List<ProductResponse> getProducts() {
         return products;
     }
